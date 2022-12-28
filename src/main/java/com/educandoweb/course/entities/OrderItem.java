@@ -29,22 +29,7 @@ public class OrderItem {
 		this.quantity = quantity;
 		this.price = price;
 	}
-
-	public Integer getQuantity() {
-		return quantity;
-	}
-
-	public void setQuantity(Integer quantity) {
-		this.quantity = quantity;
-	}
-
-	public Double getPrice() {
-		return price;
-	}
-
-	public void setPrice(Double price) {
-		this.price = price;
-	}
+	
 	
 	@JsonIgnore
 	public Order getOrder() {
@@ -61,6 +46,26 @@ public class OrderItem {
 	
 	public void setProduct(Product product) {
 		id.setProduct(product);
+	}
+	
+	public Double getPrice() {
+		return price;
+	}
+
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+	
+	public Integer getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
+	}	
+	
+	public Double getSubtotal() {
+		return price * quantity;
 	}
 
 	@Override
